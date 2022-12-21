@@ -4,6 +4,9 @@
 > 2. Flex-box
 > 3. Display Grid
 > 4. Etiquetas y sus usos.
+> 5. Tipos de display (inline - Block - inline-block)
+> 6. Estilos para texto
+> 7. Position
 
 > # 1. Modelo de caja
 - **Margin:** Es la separacion que va a tener nuestro contenedo con respecto al demas contenido.
