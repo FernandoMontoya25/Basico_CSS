@@ -18,6 +18,80 @@
 ![image](https://user-images.githubusercontent.com/66334502/208677952-f2122f38-69e6-478a-a5c4-a42fb01580f1.png)
 
 > # 2. Flex-box
+- **Nota:** Cuando es una columna justify-content cambia a vertical y align-items a horizontal
+
+- ### Alinear el contenido de un contenedor (horizontalmente)
+```css
+contenedor{
+    display: flex;
+    justify-content: flex-end;
+}
+flex-start:; /*Alinea elementos al lado izquierdo del contenedor.*/
+flex-end:; /*Alinea elementos al lado derecho del contenedor.*/
+center:; /*Alinea elementos en el centro del contenedor.*/
+space-between:; /*Muestra elementos con la misma distancia entre ellos.*/
+space-around:; /*Muestra elementos con la misma separación alrededor de ellos.*/
+```
+- ### Alinea el contenido de un contenedor verticalmente
+```css
+contenedor{
+    display: flex;
+    align-items: center;
+}
+flex-start:; /*Alinea elementos a la parte superior del contenedor.*/
+flex-end:; /*Alinea elementos a la parte inferior del contenedor.*/
+center:; /*Alinea elementos en el centro (verticalmente hablando) del contenedor.*/
+baseline:; /*Muestra elementos en la línea base del contenedor.*/
+stretch:; /*Elementos se estiran para ajustarse al contenedor.*/
+```
+
+- ### Alinea la direccion de los elementos dentro de un contenedor
+```css
+contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+row:; /*Elementos son colocados en la misma dirección del texto.*/
+row-reverse:; /*Elementos son colocados en la dirección opuesta al texto.*/
+column:; /*Elementos se colocan de arriba hacia abajo.*/
+column-reverse:; /*Elementos se colocan de abajo hacia arriba*/
+```
+
+- ### Propiedades para la alineacion de un solo objeto
+- En este ejemplo primero tenemos tres pelotas alineadas verde - amarrila - rojo y con este codigo lo que haremos sera alinearlas de tal manera que quedara verde - roja - amarrilla
+
+```css
+/*1. paso: Primero le aplicamos flex al contenedor del elemento al que queremos mover*/
+#pond {
+    display: flex;
+}
+.yellow {
+    order: 1;
+}
+```
+- Otra propiedad que podemos usar para alinear elementos individuales es align-self. Esta propiedad acepta los mismos valores de align-items y sus calores son usados para un elemento en especifico
+
+```css
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+.yellow {
+    align-self: flex-end;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 
 > # 3. Display Grid
 
