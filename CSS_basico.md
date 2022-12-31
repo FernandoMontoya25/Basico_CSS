@@ -83,17 +83,86 @@ column-reverse:; /*Elementos se colocan de abajo hacia arriba*/
 ```
 
 
-
-
-
-
-
-
-
-
-
-
 > # 3. Display Grid
+- ### Forma de crear nuestra cuadrilla
+1. Forma larga
+```css
+contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+```
+2. Forma corta
+```css
+contenedor{
+    display: grid;
+    grid-template: 60% / 33%;
+}
+```
+- ### Forma de determinar un lugar en especifico a un objeto
+```css
+contenido{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+```
+- ### Forma de determinar el tamaño de nuestra cuadrilla
+1. Primer forma: Determinando donde queremos que empice y donde queremos que termine.
+```css
+contenido{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: red;
+}
+
+/*Una forma para usar columnas mas abreviada en lugar de poner grid-column-start y grid-column-end simplemente usamos grid-column: 4 / 6.
+De esta misma forma podemos usar grid-row*/
+
+contnido{
+    grid-column: 4 / 6;
+}
+
+```
+2. Segunda forma: Determinando cuantos lugares queremos que este ocupando
+```css
+contenido{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+contenido{
+    grid-column-start: span 3;
+    grid-column-end: 6;
+}
+```
+- ### Forma para posicionar nuestro contenido pero ahora en columnas
+```css
+contenido{
+    grid-row: 3;
+}
+```
+- ### Para determinar toda el area que queremos que ocupe nuestro contenedor
+```css
+/*Grid-area: 1 / 1 / 3 / 6*/
+/*Si escribir grid-column y grid-row se te hace demasiado pesado, aquí tienes otra propiedad abreviada. grid-area admite cuatro valores separados por barras oblicuas: grid-row-start, grid-column-start, grid-row-end, seguido de grid-column-end.*/
+
+contenido{
+    grid-area: 1 / 2 / 4 / 6;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 > # 4. Etiquetas y sus usos
 ```css
